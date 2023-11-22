@@ -1,0 +1,32 @@
+[gd_scene load_steps=2 format=3 uid="uid://byt7uglr3vwas"]
+
+[ext_resource type="Script" path="res://start_screen.gd" id="1_t43kd"]
+
+[node name="start_screen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_t43kd")
+
+[node name="game_title" type="Label" parent="."]
+layout_mode = 0
+offset_left = 337.0
+offset_top = 105.0
+offset_right = 803.0
+offset_bottom = 226.0
+theme_override_font_sizes/font_size = 52
+text = "Tower Defence"
+vertical_alignment = 1
+
+[node name="title_button" type="Button" parent="game_title"]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 11.0
+offset_top = 2.0
+offset_right = 453.0
+offset_bottom = 131.0
+
+[connection signal="pressed" from="game_title/title_button" to="." method="_on_title_button_pressed"]
