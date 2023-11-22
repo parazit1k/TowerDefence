@@ -33,6 +33,7 @@ func _on_title_button_pressed():
 
 func edit_title_text():
 	titleButton.disabled = true
+	
 	if line:
 		title.text = title.text.substr(0, title.text.length() - 1)
 		line = false
