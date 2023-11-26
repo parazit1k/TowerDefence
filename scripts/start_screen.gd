@@ -54,5 +54,13 @@ func edit_title_text():
 	do_line = true
 
 
-func _on_button_pressed():
-	get_tree().change_scene_to_file("res://playing_area.tscn")
+func _on_quit_pressed():
+	get_tree().quit(0)
+
+
+func _on_options_pressed():
+	pass # Replace with function body.
+
+
+func _on_start_pressed():
+	get_tree().change_scene_to_file("res://screens/playing_area.tscn")

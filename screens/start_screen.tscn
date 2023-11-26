@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://byt7uglr3vwas"]
 
-[ext_resource type="Script" path="res://start_screen.gd" id="1_t43kd"]
+[ext_resource type="Script" path="res://scripts/start_screen.gd" id="1_31xuk"]
 
 [node name="start_screen" type="Control"]
 layout_mode = 3
@@ -9,7 +9,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_t43kd")
+script = ExtResource("1_31xuk")
 
 [node name="game_title" type="Label" parent="."]
 layout_mode = 0
@@ -48,14 +48,16 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 34
 text = "Play"
 
-[node name="Button2" type="Button" parent="VBoxContainer"]
+[node name="options" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 text = "Options"
 
-[node name="Button3" type="Button" parent="VBoxContainer"]
+[node name="quit" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 text = "Quit
 "
 
 [connection signal="pressed" from="game_title/title_button" to="." method="_on_title_button_pressed"]
-[connection signal="pressed" from="VBoxContainer/start" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="VBoxContainer/options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="VBoxContainer/quit" to="." method="_on_quit_pressed"]
