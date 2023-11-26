@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://dwxfvhhped86u"]
+
+[ext_resource type="Script" path="res://playing_area.gd" id="1_bh1q8"]
+
+[sub_resource type="Curve2D" id="Curve2D_rl7p6"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 79, 67, 0, 0, 0, 0, 0, 0)
+}
+point_count = 2
+
+[node name="playingArea" type="Node2D"]
+script = ExtResource("1_bh1q8")
+
+[node name="Path2D" type="Path2D" parent="."]
+scale = Vector2(11.5316, 8.02985)
+curve = SubResource("Curve2D_rl7p6")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
+position = Vector2(51.9707, 44.0764)
+rotation = -2.4382
+progress = 35.457

@@ -16,7 +16,7 @@ func _process(delta):
 	pass
 
 func _do_lines():
-	await get_tree().create_timer(0.3).timeout
+	await get_tree().create_timer(0.5).timeout
 	if do_line:
 		if line:
 			title.text = title.text.substr(0, title.text.length() - 1)
@@ -52,3 +52,7 @@ func edit_title_text():
 	
 	titleButton.disabled = false
 	do_line = true
+
+
+func _on_button_pressed():
+	get_tree().change_scene_to_file("res://playing_area.tscn")
